@@ -1,0 +1,149 @@
+/* --- Contenedor Principal --- */
+.cotizador-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Tarjeta Principal --- */
+.container {
+  max-width: 450px;
+  width: 100%;
+  background-color: var(--surface-color);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* --- Tipografía --- */
+.container h1 {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.container p {
+  color: var(--text-light-color);
+  margin-bottom: 30px;
+}
+
+/* --- Formulario --- */
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* --- Botones --- */
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* --- Paneles de Resultado --- */
+.resultado {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  line-height: 1.7;
+  animation: fadeIn 0.25s ease;
+}
+
+.resultado h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.resultado p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.resultado.exito {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.resultado.exito h2 {
+  color: var(--success-text);
+}
+
+.resultado.error {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+}
+
+.resultado.error h2 {
+  color: var(--error-text);
+}
+
+.resultado button {
+  margin-top: 15px;
+  background-color: var(--surface-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.resultado button:hover {
+  background-color: var(--primary-color);
+  color: var(--surface-color);
+}
+
+/* --- Animacion de Fade In corto --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global */
+
+/* --- Paleta de Colores --- */
+:root {
+  --primary-color: #4a90e2;
+  --primary-hover: #357abd;
+  --background-color: #f7f8fa;
+  --surface-color: #ffffff;
+  --text-color: #333333;
+  --text-light-color: #666666;
+  --border-color: #e0e0e0;
+  --success-bg: #e8f5e9;
+  --success-text: #2e7d32;
+  --error-bg: #ffebee;
+  --error-text: #c62828;
+}
+
+/* --- Estilos Generales --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* para quitar el scroll, ya que la pagina no requiere scrollear, gusto personal */
+}

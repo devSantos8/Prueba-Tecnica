@@ -1,0 +1,42 @@
+<div class="cotizador-wrapper">
+  <div class="container">
+    <h1>Cotizador de Envíos</h1>
+    <p *ngIf="!estado">Ingresa las dimensiones de tu paquete en centímetros (cm).</p>
+
+    <!-- Formulario -->
+    <div *ngIf="!estado" class="formulario">
+      <div class="input-group">
+        <label for="largo">Largo:</label>
+        <input type="number" id="largo" [(ngModel)]="medidas.largo" placeholder="ej: 30" min="1" (keydown)="signosInvalidos($event)" (input)="limitarDigitos('largo', $event)">
+      </div>
+      <div class="input-group">
+        <label for="ancho">Ancho:</label>
+        <input type="number" id="ancho" [(ngModel)]="medidas.ancho" placeholder="ej: 20" min="1" (keydown)="signosInvalidos($event)" (input)="limitarDigitos('ancho', $event)">
+      </div>
+      <div class="input-group">
+        <label for="alto">Alto:</label>
+        <input type="number" id="alto" [(ngModel)]="medidas.alto" placeholder="ej: 15" min="1" (keydown)="signosInvalidos($event)" (input)="limitarDigitos('alto', $event)">
+      </div>
+      <button (click)="calcular()">Calcular Envío</button>
+    </div>
+
+    <!-- Resultado exitoso -->
+    <div *ngIf="estado === 'exito'" class="resultado exito">
+      <h2>✅ ¡Pedido ingresado con éxito!</h2>
+      <p><strong>Costo de la cotización:</strong> {{ resultado.costo | currency:'CLP':'symbol-narrow':'1.0-0' }}</p>
+      <p><strong>Volumen del paquete:</strong> {{ resultado.volumen | number }} cm³</p>
+      <p><strong>Número de pedido:</strong> {{ resultado.id }}</p>
+      <p><strong>Fecha:</strong> {{ resultado.fecha }}</p>
+      <p><strong>Hora de ingreso:</strong> {{ resultado.hora }}</p>
+      <button (click)="reiniciar()">Cotizar otro paquete</button>
+    </div>
+
+
+    <!-- Resultado error -->
+    <div *ngIf="estado === 'error'" class="resultado error">
+      <h2>❌ Volumen Excedido</h2>
+      <p>El volumen del paquete supera el límite permitido de 2m³. Por favor, contacta a un ejecutivo/administrador.</p>
+      <button (click)="reiniciar()">Volver a intentar</button>
+    </div>
+  </div>
+</div>
