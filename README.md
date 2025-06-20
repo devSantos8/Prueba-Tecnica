@@ -1,59 +1,34 @@
-# PruebaAngular
+# Prueba Técnica: Cotizador de Envíos
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+Aplicación desarrollada como parte del proceso de selección. El proyecto consiste en un cotizador de precios para paquetes.
 
-## Development server
+## Características Principales
 
-To start a local development server, run:
+* Cálculo de costo de envío basado en el volumen del paquete (Tarifa: $2.000 CLP por cada 20 cm³).
+* Validación de volumen máximo permitido (2m³), mostrando un mensaje de error claro si se excede.
+* Generación de un resumen de la cotización exitosa, incluyendo costo, número de pedido único, fecha, hora y volumen del paquete.
 
-```bash
-ng serve
-```
+## Instalación y Ejecución del Proyecto
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Para ejecutar este proyecto en un entorno de desarrollo local, por favor sigue estos pasos:
 
-## Code scaffolding
+1.  **Clonar el repositorio**
+    ```bash
+    git clone https://github.com/devSantos8/Prueba-Tecnica.git
+    ```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+2.  **Navegar a la carpeta del proyecto**
+    ```bash
+    cd Prueba-Tecnica
+    ```
 
-```bash
-ng generate component component-name
-```
+3.  **Instalar las dependencias**
+    ```bash
+    npm install
+    ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+4.  **Ejecutar el proyecto**
+    ```bash
+    ng serve -o
+    ```
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
