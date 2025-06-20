@@ -10,7 +10,7 @@ Aplicación desarrollada como parte del proceso de selección. El proyecto consi
 
 ## Instalación y Ejecución del Proyecto
 
-Para ejecutar este proyecto en un entorno de desarrollo local, por favor sigue estos pasos:
+Para ejecutar este proyecto en un entorno local siga los siguientes pasos:
 
 1.  **Clonar el repositorio**
     ```bash
